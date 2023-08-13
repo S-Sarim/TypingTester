@@ -14,7 +14,7 @@ void main(void)
 	do
 	{
 
-		system("cls");
+		system("cls"); //clears the screen
 		int a, b;
 		printf("\t\t\t\t***************TYPING TESTER***************\n");
 		printf("\t\t\t\t\t     M A I N    M E N U\n");
@@ -27,7 +27,7 @@ void main(void)
 		system("cls");
 		printf("\t\t\t\t***************TYPING TESTER***************\n");
 
-		if (a == 1)
+		if (a == 1) //starts the game
 		{
 			printf("\t\t\t\t\t      Enter your name:\n");
 			scanf("%s",user);
@@ -64,8 +64,8 @@ void main(void)
 
 					time_t start = time(NULL);
 					char *path = calloc(20, sizeof(char));
-					int num = rand() % 3;
-					char name[] = {'E', num + '0', '.', 't', 'x', 't'};
+					int num = rand() % 3
+					char name[] = {'E', num + '0', '.', 't', 'x', 't'}; //selects a random text for the difficulty selected
 					strcat(path, name);
 					FILE *fptr = fopen(name, "r");
 					if (fptr == NULL)
@@ -253,7 +253,7 @@ void main(void)
 			{
 				char ch;
 				FILE *fptr;
-				fptr = fopen("EStat.txt","r");
+				fptr = fopen("EStat.txt","r"); //opens the Easy difficulty stats and displays
 				printf("\t\t\t\t***************TYPING TESTER***************\n");
 				if(fptr == NULL)
 				{
@@ -273,7 +273,7 @@ void main(void)
 			if(diff == 2)
 			{char ch;
 				FILE *fptr;
-				fptr = fopen("MStat.txt","r");
+				fptr = fopen("MStat.txt","r"); //opens the Medium difficulty stats and displays
 				printf("\t\t\t\t***************TYPING TESTER***************\n");
 				if(fptr == NULL)
 				{
@@ -294,7 +294,7 @@ void main(void)
 			{
 				char ch;
 				FILE *fptr;
-				fptr = fopen("HStat.txt","r");
+				fptr = fopen("HStat.txt","r"); //opens the hard difficulty stats and displays
 				printf("\t\t\t\t***************TYPING TESTER***************\n");
 				if(fptr == NULL)
 				{
